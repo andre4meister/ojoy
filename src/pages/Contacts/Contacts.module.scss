@@ -1,0 +1,45 @@
+@import '../../styles/variables.module.scss';
+
+.container {
+  @include easyPageContainer;
+}
+
+.info__block {
+  &:nth-child(2) {
+    margin-top: 40px;
+  }
+
+  h2 {
+    @include bold28;
+    color: white;
+    margin: 0 0 10px 0;
+  }
+
+  p {
+    @include regular14;
+    color: white;
+    margin: 0;
+  }
+}
+
+.requirements {
+  margin-top: 20px;
+
+  h4 {
+    @include semiBoldButton16;
+    color: white;
+    margin: 0 0 10px 0;
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  li {
+    @include regular14;
+    color: white;
+    margin: 0 0 5px 0;
+    padding: 0;
+  }
+}

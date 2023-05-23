@@ -1,0 +1,37 @@
+@import "../../styles/variables.module.scss";
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 7px;
+  height: 40px;
+}
+
+.pagination__button {
+  @include button;
+  color: $color-white;
+  background-color: $color-button-pagination !important;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  width: 41px;
+  height: 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0;
+
+  &:hover,
+  &:active {
+    background-color: $color-button-pink-hover !important;
+    color: $color-white !important;
+  }
+}
+
+.pagination__button_active {
+  background-color: $color-button-pink !important;
+}

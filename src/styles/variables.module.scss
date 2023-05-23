@@ -1,0 +1,221 @@
+// FONT
+$fontWeight-normal: 400;
+$fontWeight-semiBold: 500;
+$fontWeight-bold: 700;
+$fontSize-xxsmall: 14px;
+$fontSize-xsmall: 16px;
+$fontSize-small: 18px;
+$fontSize-medium: 24px;
+$fontSize-large: 30px;
+
+// COLORS
+$color-white: #ffffff;
+$color-black: #000000;
+$color-bg-main: #0F0A11;
+$color-gray: #9D9D9D;
+$color-dark-purple: #1B0A2C;
+$color-dark-purple-2: #160B20;
+$color-button-pink: #9D0C49;
+$color-button-pink-hover: #A52359;
+$color-button-pagination: #241A3C;
+
+
+
+$color-second-black: #090909;
+$color-lime: #85df65;
+$color-lime-click: #a3ed88;
+$color-purple: #7f6eeb;
+$color-red-brown: #300a0a;
+$color-white-pink: #fadbff;
+
+$color-gray-2: #7c7c7c;
+$color-gray-3: #d9d9d9;
+$color-gray-bg: #f5f5f5;
+
+$loader-light: #ffffff;
+$loader-dark: #fec602;
+
+// NOTIFICATIONS
+$successBackgroundColor: #eaf7ee;
+$successBorderColor: #d3e6d8;
+$successTextColor: #3bb65d;
+
+$infoBackgroundColor: #e5effa;
+$infoBorderColor: #c7d6e7;
+$infoTextColor: #016ce2;
+
+$errorBackgroundColor: #fcede9;
+$errorBorderColor: #edd4ce;
+$errorTextColor: #ea4e2c;
+
+// OTHERS
+$borderRadius-s: 6px;
+$borderRadius-m: 10px;
+$borderRadius-l: 14px;
+$borderRadius-xl: 20px;
+$circle: 50%;
+
+// ANIMATION
+$transition: 0.2s ease-in-out;
+$transition-slow: 0.6s ease-in-out;
+
+// MARGIN & PADDING
+$indent-xsmall: 5px;
+$indent-small: 10px;
+$indent-smedium: 15px;
+$indent-medium: 20px;
+$indent-large: 30px;
+
+// SIZES
+$size-sidebarWidth: 260px;
+
+@mixin extraBold60 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 82px;
+  color: #ffffff;
+}
+
+@mixin bold36 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  color: #000000;
+}
+
+@mixin bold28 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  color: #000000;
+}
+
+@mixin medium28 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 38px;
+  color: #000000;
+}
+
+@mixin medium20 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+
+@mixin medium18 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}
+
+@mixin semiBold28 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 33px;
+  color: white;
+}
+
+@mixin semiBold18 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}
+
+@mixin semiBoldButton16 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@mixin regular16 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@mixin regular14 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+}
+
+@mixin easyPageContainer {
+  max-width: 1180px;
+  width: 100%;
+  margin: 40px auto 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin button {
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  &:active,
+  &:hover {
+    outline: none;
+    border: none;
+  }
+}
+
+@mixin pinkButton {
+  @include button;
+  color: $color-white;
+  background-color: $color-button-pink;
+  border-radius: 4px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  &:hover,
+  &:active {
+    background-color: $color-button-pink-hover !important;
+    color: $color-white !important;
+  }
+}
+
+@mixin blackButton {
+  @include button;
+}
+
+@mixin whiteButton {
+  @include button;
+}
+
+@mixin limeButton {
+  @include button;
+}
+
+@mixin input($border) {
+  &:active,
+  &:hover,
+  &:focus {
+    border: $border;
+    outline: none;
+  }
+}

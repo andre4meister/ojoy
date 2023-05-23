@@ -1,0 +1,35 @@
+@import "../../styles/variables.module.scss";
+
+.container {
+  margin: 40px auto 80px auto;
+  max-width: 1180px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.moviesBlock {
+  margin-top: 40px;
+}
+
+.moviesList {
+  max-height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
