@@ -3,7 +3,7 @@ import axiosInstance from './axios';
 export class MoviesApi {
   static async getMovieById(id) {
     try {
-      const response = await axiosInstance.get(`movies/${id}`);
+      const response = await axiosInstance.get(`api-movies/${id}`);
       return response;
     } catch (e) {
       return e;
@@ -12,7 +12,7 @@ export class MoviesApi {
 
   static async getMovies(filters) {
     try {
-      const response = await axiosInstance.get(`movies`);
+      const response = await axiosInstance.get(`api-movies`);
       return response;
     } catch (e) {
       return e;
@@ -21,7 +21,7 @@ export class MoviesApi {
 
   static async createMovie(body) {
     try {
-      const response = await axiosInstance.post('movies', body);
+      const response = await axiosInstance.post('api-movies', body);
       return response;
     } catch (e) {
       return e;
@@ -30,7 +30,7 @@ export class MoviesApi {
 
   static async updateMovie(body) {
     try {
-      const response = await axiosInstance.put('movies', body);
+      const response = await axiosInstance.put('api-movies', body);
       return response;
     } catch (e) {
       return e;
@@ -39,7 +39,7 @@ export class MoviesApi {
 
   static async deleteMovie(id) {
     try {
-      const response = await axiosInstance.delete(`movies/${id}`);
+      const response = await axiosInstance.delete(`api-movies/${id}`);
       return response;
     } catch (e) {
       return e;

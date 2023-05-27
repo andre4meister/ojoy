@@ -3,7 +3,7 @@ import axiosInstance from './axios';
 export class SerialsApi {
   static async getSerialById(id) {
     try {
-      const response = await axiosInstance.get(`serials/${id}`);
+      const response = await axiosInstance.get(`api-serials/${id}`);
       return response;
     } catch (e) {
       return e;
@@ -12,7 +12,7 @@ export class SerialsApi {
 
   static async getSerials(filters) {
     try {
-      const response = await axiosInstance.get(`serials`);
+      const response = await axiosInstance.get(`api-serials`);
       return response;
     } catch (e) {
       return e;
@@ -21,7 +21,7 @@ export class SerialsApi {
 
   static async createSerial(body) {
     try {
-      const response = await axiosInstance.post('serials', body);
+      const response = await axiosInstance.post('api-serials', body);
       return response;
     } catch (e) {
       return e;
@@ -30,7 +30,7 @@ export class SerialsApi {
 
   static async updateSerial(body) {
     try {
-      const response = await axiosInstance.put('serials', body);
+      const response = await axiosInstance.put('api-serials', body);
       return response;
     } catch (e) {
       return e;
@@ -39,7 +39,7 @@ export class SerialsApi {
 
   static async deleteSerial(id) {
     try {
-      const response = await axiosInstance.delete(`serials/${id}`);
+      const response = await axiosInstance.delete(`api-serials/${id}`);
       return response;
     } catch (e) {
       return e;
