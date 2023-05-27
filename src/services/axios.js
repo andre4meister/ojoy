@@ -2,7 +2,7 @@ import axios from 'axios';
 import getToken from '../utils/user/getToken';
 
 const backendUrl =
-  process.env.NODE_ENV === 'development' ? 'http://localhost:5000/' : 'http://172.31.93.185';
+  process.env.NODE_ENV === 'development' ? 'http://localhost:5000/' : 'http://localhost:5000/';
 const axiosInstance = axios.create({
   baseURL: backendUrl,
   withCredentials: true,
