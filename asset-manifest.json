@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/ojoy/static/css/main.4519d590.css",
-    "main.js": "/ojoy/static/js/main.4657ac11.js",
+    "main.css": "/ojoy/static/css/main.5b669f87.css",
+    "main.js": "/ojoy/static/js/main.728ec249.js",
     "static/css/813.a14fbad7.chunk.css": "/ojoy/static/css/813.a14fbad7.chunk.css",
-    "static/js/813.436e830a.chunk.js": "/ojoy/static/js/813.436e830a.chunk.js",
+    "static/js/813.1a3aed4b.chunk.js": "/ojoy/static/js/813.1a3aed4b.chunk.js",
     "static/css/22.d880ae63.chunk.css": "/ojoy/static/css/22.d880ae63.chunk.css",
     "static/js/22.97a4ffa5.chunk.js": "/ojoy/static/js/22.97a4ffa5.chunk.js",
     "static/css/836.d880ae63.chunk.css": "/ojoy/static/css/836.d880ae63.chunk.css",
@@ -16,7 +16,7 @@
     "static/js/498.163d8ee5.chunk.js": "/ojoy/static/js/498.163d8ee5.chunk.js",
     "static/js/168.7b2b9f60.chunk.js": "/ojoy/static/js/168.7b2b9f60.chunk.js",
     "static/css/696.3d532141.chunk.css": "/ojoy/static/css/696.3d532141.chunk.css",
-    "static/js/696.56d72d89.chunk.js": "/ojoy/static/js/696.56d72d89.chunk.js",
+    "static/js/696.fa3df929.chunk.js": "/ojoy/static/js/696.fa3df929.chunk.js",
     "static/js/787.0706c858.chunk.js": "/ojoy/static/js/787.0706c858.chunk.js",
     "static/js/449.5a6cc716.chunk.js": "/ojoy/static/js/449.5a6cc716.chunk.js",
     "static/js/93.3fd2ec95.chunk.js": "/ojoy/static/js/93.3fd2ec95.chunk.js",
@@ -26,10 +26,10 @@
     "static/media/Manrope-Regular.ttf": "/ojoy/static/media/Manrope-Regular.fc58e53d1024e5b336b7.ttf",
     "static/media/Manrope-Bold.ttf": "/ojoy/static/media/Manrope-Bold.f90749d53c89d2780cfb.ttf",
     "index.html": "/ojoy/index.html",
-    "main.4519d590.css.map": "/ojoy/static/css/main.4519d590.css.map",
-    "main.4657ac11.js.map": "/ojoy/static/js/main.4657ac11.js.map",
+    "main.5b669f87.css.map": "/ojoy/static/css/main.5b669f87.css.map",
+    "main.728ec249.js.map": "/ojoy/static/js/main.728ec249.js.map",
     "813.a14fbad7.chunk.css.map": "/ojoy/static/css/813.a14fbad7.chunk.css.map",
-    "813.436e830a.chunk.js.map": "/ojoy/static/js/813.436e830a.chunk.js.map",
+    "813.1a3aed4b.chunk.js.map": "/ojoy/static/js/813.1a3aed4b.chunk.js.map",
     "22.d880ae63.chunk.css.map": "/ojoy/static/css/22.d880ae63.chunk.css.map",
     "22.97a4ffa5.chunk.js.map": "/ojoy/static/js/22.97a4ffa5.chunk.js.map",
     "836.d880ae63.chunk.css.map": "/ojoy/static/css/836.d880ae63.chunk.css.map",
@@ -42,14 +42,14 @@
     "498.163d8ee5.chunk.js.map": "/ojoy/static/js/498.163d8ee5.chunk.js.map",
     "168.7b2b9f60.chunk.js.map": "/ojoy/static/js/168.7b2b9f60.chunk.js.map",
     "696.3d532141.chunk.css.map": "/ojoy/static/css/696.3d532141.chunk.css.map",
-    "696.56d72d89.chunk.js.map": "/ojoy/static/js/696.56d72d89.chunk.js.map",
+    "696.fa3df929.chunk.js.map": "/ojoy/static/js/696.fa3df929.chunk.js.map",
     "787.0706c858.chunk.js.map": "/ojoy/static/js/787.0706c858.chunk.js.map",
     "449.5a6cc716.chunk.js.map": "/ojoy/static/js/449.5a6cc716.chunk.js.map",
     "93.3fd2ec95.chunk.js.map": "/ojoy/static/js/93.3fd2ec95.chunk.js.map",
     "710.ed3ff389.chunk.js.map": "/ojoy/static/js/710.ed3ff389.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4519d590.css",
-    "static/js/main.4657ac11.js"
+    "static/css/main.5b669f87.css",
+    "static/js/main.728ec249.js"
   ]
 }
