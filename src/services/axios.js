@@ -2,7 +2,7 @@ import axios from 'axios';
 import getToken from '../utils/user/getToken';
 
 const backendUrl =
-  process.env.NODE_ENV === 'development' ? 'http://localhost:5000/' : 'http://localhost:5000/';
+  process.env.NODE_ENV === 'development' ? 'http://localhost:5000/' : 'https://ojoy.onrender.com';
 const axiosInstance = axios.create({
   baseURL: backendUrl,
   withCredentials: true,
