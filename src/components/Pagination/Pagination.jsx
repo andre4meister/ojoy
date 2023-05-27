@@ -16,10 +16,12 @@ const Pagination = ({ pagesCount, currentPage, setCurrentPage }) => {
   return (
     <div className={styles.pagination}>
       {array.map((item) => (
-        <Button key={item}
-                className={`${styles.pagination__button} ${item === currentPage ? styles.pagination__button_active : ''}`}
-                onClick={() => handleSetCurrentPage(item)}>
-          {item+1}
+        <Button
+          key={item}
+          className={`${styles.pagination__button} ${item === currentPage ? styles.pagination__button_active : ''}`}
+          onClick={() => handleSetCurrentPage(item)}
+        >
+          {item + 1}
         </Button>
       ))}
     </div>

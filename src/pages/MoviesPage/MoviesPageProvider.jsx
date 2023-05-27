@@ -14,7 +14,7 @@ const MoviesPageProvider = () => {
 
   return (
     <DataResolver error={error} data={data} loading={isLoading}>
-      <MoviesPage movies={data} title='Фільми' />
+      <MoviesPage movies={data} title="Фільми" />
     </DataResolver>
   );
 };

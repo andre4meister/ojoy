@@ -5,29 +5,25 @@ import DataResolver from '../Layout/DataResolver';
 
 const SchedulePageProvider = () => {
   const { actions } = useContext(AppContext);
-  const {isLoading, error, data, refetch} = actions.getSerials;
+  const { isLoading, error, data, refetch } = actions.getSerials;
 
-  const serials = [...data]
-    .sort((a,b) => +a.createdAt.split(' ')[1] - +b.createdAt.split(' ')[1])
-    .slice(0,9);
+  const serials = [...data].sort((a, b) => +a.createdAt.split(' ')[1] - +b.createdAt.split(' ')[1]).slice(0, 9);
 
   const schedule = [
     {
       id: 1,
       title: 'Понеділок',
-      items: serials.slice(0,3)
-
+      items: serials.slice(0, 3),
     },
     {
       id: 2,
       title: 'Вівторок',
-      items: serials.slice(3,6)
-
+      items: serials.slice(3, 6),
     },
     {
       id: 3,
       title: 'Середа',
-      items: serials.slice(6,9)
+      items: serials.slice(6, 9),
     },
     {
       id: 4,
@@ -36,14 +32,14 @@ const SchedulePageProvider = () => {
     },
     {
       id: 5,
-      title: 'П\'ятниця',
+      title: "П'ятниця",
       items: [],
     },
   ];
 
   return (
     <DataResolver data={data} loading={isLoading} error={error}>
-      <SchedulePage schedule={schedule}/>
+      <SchedulePage schedule={schedule} />
     </DataResolver>
   );
 };

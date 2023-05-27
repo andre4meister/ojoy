@@ -1,4 +1,4 @@
-@import "../../styles/variables.module.scss";
+@import '../../styles/variables.module.scss';
 
 .container {
   width: 283px;
@@ -24,7 +24,8 @@
   width: 100%;
   gap: 15px;
 
-  p, h3 {
+  p,
+  h3 {
     margin: 0;
   }
 
@@ -36,7 +37,6 @@
     @include semiBoldButton16;
   }
 }
-
 
 .logout {
   @include limeButton;

@@ -27,8 +27,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "startServer": "json-server -p 5000 -w db.json -d 500",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build --repo=https://github.com/andre4meister/online-store.git",
+    "deploy": "gh-pages -d build --repo=https://github.com/andre4meister/ojoy.git",
     "prettify": "npx prettier --write --config .prettierrc \"src/**/*.{js,jsx,json,css,scss,html}\"",
     "lint": "npx eslint ./src",
     "lint-fix": "npx eslint ./src --fix"

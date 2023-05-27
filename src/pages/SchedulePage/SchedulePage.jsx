@@ -2,7 +2,7 @@ import styles from './SchedulePage.module.scss';
 import PageTitle from '../../components/PageTitle/PageTitle';
 import MainListItem from '../../components/MainListItem/MainListItem';
 
-const SchedulePage = ({schedule}) => {
+const SchedulePage = ({ schedule }) => {
   const filteredSchedule = schedule.filter((day) => day.items.length > 0);
 
   return (
@@ -16,8 +16,8 @@ const SchedulePage = ({schedule}) => {
             </div>
             <ul className={styles.day__list}>
               {scheduleDay.items.map((movie) => (
-                <MainListItem item={movie} showType={true} key={movie.id}/>
-                ))}
+                <MainListItem item={movie} showType={true} key={movie.id} />
+              ))}
             </ul>
           </div>
         ))}

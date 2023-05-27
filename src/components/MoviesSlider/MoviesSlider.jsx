@@ -13,13 +13,11 @@ const MoviesSlider = ({ title, showMoreLink, slidesToShow, moviesGroup, showType
   return (
     <div className={styles.moviesBlock}>
       <PageTitle title={title} />
-      {
-        showMoreLink &&
-        <div
-          onClick={() => navigate(showMoreLink)}
-          className={styles.showMoreButton}>
+      {showMoreLink && (
+        <div onClick={() => navigate(showMoreLink)} className={styles.showMoreButton}>
           Показати все
-        </div>}
+        </div>
+      )}
       <Carousel
         className={styles.moviesList}
         autoplay

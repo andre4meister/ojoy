@@ -9,10 +9,8 @@ const SignedImage = ({ url, alt = '' }) => {
       setSignedUrl(signedUrl);
     });
   }, [url]);
-  
-  return (
-    <img src={signedUrl} alt={alt} />
-  );
+
+  return <img src={signedUrl} alt={alt} />;
 };
 
 export default SignedImage;

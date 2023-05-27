@@ -11,11 +11,7 @@ const DataResolver = ({ data, error, loading, children }) => {
     return <AppErrorPage appError={error} />;
   }
 
-  return loading === false && (
-    <>
-      {typeof children === 'function' ? children(data) : children}
-    </>
-  );
+  return loading === false && <>{typeof children === 'function' ? children(data) : children}</>;
 };
 
 export default DataResolver;

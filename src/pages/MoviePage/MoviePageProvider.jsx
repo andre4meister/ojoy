@@ -12,11 +12,15 @@ const MoviePageProvider = () => {
   const location = useLocation();
   const type = location.pathname.split('/').filter((l) => l !== '')[0];
   console.log(type);
-  const { isLoading: isLoadingMovie, error: errorMovie, data: dataMovie, refetch: refetchMovie } = useQuery({
+  const {
+    isLoading: isLoadingMovie,
+    error: errorMovie,
+    data: dataMovie,
+    refetch: refetchMovie,
+  } = useQuery({
     queryKey: ['movieById', { id }],
     enabled: false,
-    onSuccess: (data) => {
-    },
+    onSuccess: (data) => {},
     onError: (error) => {
       console.log(error);
     },
@@ -27,11 +31,15 @@ const MoviePageProvider = () => {
     },
   });
 
-  const { isLoading: isLoadingSerial, error: errorSerial, data: dataSerial,  refetch: refetchSerial } = useQuery({
+  const {
+    isLoading: isLoadingSerial,
+    error: errorSerial,
+    data: dataSerial,
+    refetch: refetchSerial,
+  } = useQuery({
     queryKey: ['serialById', { id }],
     enabled: false,
-    onSuccess: (data) => {
-    },
+    onSuccess: (data) => {},
     onError: (error) => {
       console.log(error);
     },
@@ -42,13 +50,13 @@ const MoviePageProvider = () => {
     },
   });
 
-  const isTypeMovie =  type === 'movie';
+  const isTypeMovie = type === 'movie';
   const isLoading = isTypeMovie ? isLoadingMovie : isLoadingSerial;
-  const error =  isTypeMovie ?errorMovie : errorSerial;
+  const error = isTypeMovie ? errorMovie : errorSerial;
   const data = isTypeMovie ? dataMovie : dataSerial;
 
   useEffect(() => {
-    isTypeMovie ? refetchMovie(['movieById', { id }]) : refetchSerial(['serialById', { id }])
+    isTypeMovie ? refetchMovie(['movieById', { id }]) : refetchSerial(['serialById', { id }]);
   }, [id]);
 
   return (

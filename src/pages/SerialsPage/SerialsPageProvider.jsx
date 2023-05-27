@@ -14,7 +14,7 @@ const SerialsPageProvider = () => {
 
   return (
     <DataResolver error={error} data={data} loading={isLoading}>
-      <MoviesPage movies={data} title='Серіали' />
+      <MoviesPage movies={data} title="Серіали" />
     </DataResolver>
   );
 };

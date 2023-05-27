@@ -19,25 +19,95 @@ const queryClient = new QueryClient();
 
 const router = createHashRouter(
   createRoutesFromElements(
-    <Route path='/' element={<LayoutProvider />}>
-      <Route path='movie/:id' element={<Suspense fallback={<Loader />}> <MoviePageProvider /> </Suspense>} />
-      <Route path='serial/:id' element={<Suspense fallback={<Loader />}> <MoviePageProvider /> </Suspense>} />
-      <Route path='movies/' element={<Suspense fallback={<Loader />}> <MoviesPageProvider /> </Suspense>} />
-      <Route path='serials/'
-             element={<Suspense fallback={<Loader />}> <SerialsPageProvider /> </Suspense>} />
-      <Route path='about' element={<Suspense fallback={<Loader />}> <AboutUs /> </Suspense>} />
-      <Route path='schedule'
-             element={<Suspense fallback={<Loader />}> <SchedulePageProvider /> </Suspense>} />
-      <Route path='contacts' element={<Suspense fallback={<Loader />}> <Contacts /> </Suspense>} />
-      <Route index element={<Suspense fallback={<Loader />}> <MainPageProvider /> </Suspense>} />
-      <Route path='*' element={<Suspense fallback={<Loader />}> <NotFoundPage /> </Suspense>} />
+    <Route path="/" element={<LayoutProvider />}>
+      <Route
+        path="movie/:id"
+        element={
+          <Suspense fallback={<Loader />}>
+            {' '}
+            <MoviePageProvider />{' '}
+          </Suspense>
+        }
+      />
+      <Route
+        path="serial/:id"
+        element={
+          <Suspense fallback={<Loader />}>
+            {' '}
+            <MoviePageProvider />{' '}
+          </Suspense>
+        }
+      />
+      <Route
+        path="movies/"
+        element={
+          <Suspense fallback={<Loader />}>
+            {' '}
+            <MoviesPageProvider />{' '}
+          </Suspense>
+        }
+      />
+      <Route
+        path="serials/"
+        element={
+          <Suspense fallback={<Loader />}>
+            {' '}
+            <SerialsPageProvider />{' '}
+          </Suspense>
+        }
+      />
+      <Route
+        path="about"
+        element={
+          <Suspense fallback={<Loader />}>
+            {' '}
+            <AboutUs />{' '}
+          </Suspense>
+        }
+      />
+      <Route
+        path="schedule"
+        element={
+          <Suspense fallback={<Loader />}>
+            {' '}
+            <SchedulePageProvider />{' '}
+          </Suspense>
+        }
+      />
+      <Route
+        path="contacts"
+        element={
+          <Suspense fallback={<Loader />}>
+            {' '}
+            <Contacts />{' '}
+          </Suspense>
+        }
+      />
+      <Route
+        index
+        element={
+          <Suspense fallback={<Loader />}>
+            {' '}
+            <MainPageProvider />{' '}
+          </Suspense>
+        }
+      />
+      <Route
+        path="*"
+        element={
+          <Suspense fallback={<Loader />}>
+            {' '}
+            <NotFoundPage />{' '}
+          </Suspense>
+        }
+      />
     </Route>,
   ),
 );
 
 const App = () => (
   <ConfigProvider>
-    <div id='app'>
+    <div id="app">
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
       </QueryClientProvider>

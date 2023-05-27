@@ -12,13 +12,11 @@ import AppContext from '../../context/AppContext';
 const Dashboard = () => {
   const navigate = useNavigate();
 
-return(
+  return (
     <div className={styles.dashboard}>
-        <div className={styles.dashboard__container}>
-
-        </div>
+      <div className={styles.dashboard__container}></div>
     </div>
-)
+  );
 };
 
 export default Dashboard;

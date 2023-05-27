@@ -31,15 +31,9 @@ const Slider = ({ sliderItems }) => {
               <SignedImage url={item.img} alt={item.title} />
             </div>
             <div className={styles.item__content}>
-              <h3 className={styles.content__title}>
-                {item.title}
-              </h3>
-              <p className={styles.content__description}>
-                {item.description}
-              </p>
-              <Button
-                className={styles.content__button}
-                onClick={() => handleNavigate(item)}>
+              <h3 className={styles.content__title}>{item.title}</h3>
+              <p className={styles.content__description}>{item.description}</p>
+              <Button className={styles.content__button} onClick={() => handleNavigate(item)}>
                 Дивитися
               </Button>
             </div>

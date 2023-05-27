@@ -7,10 +7,20 @@ import { useState } from 'react';
 import useScreenSize from '../../hooks/useScreenSize';
 
 const MoviePage = ({ movie }) => {
-
   const {
-    name, type, status, genre, studio, createdAt, rating, description, duration, voicing,
-    mainPhotoUrl, photos, episods,
+    name,
+    type,
+    status,
+    genre,
+    studio,
+    createdAt,
+    rating,
+    description,
+    duration,
+    voicing,
+    mainPhotoUrl,
+    photos,
+    episods,
   } = movie;
   const episodsCount = episods.length;
   const [episode, setEpisode] = useState(episods[0]);
@@ -75,16 +85,12 @@ const MoviePage = ({ movie }) => {
                 <span className={styles.info__item__value}>{voicing}</span>
               </div>
             </div>
-            <div className={styles.description}>
-              {description}
-            </div>
+            <div className={styles.description}>{description}</div>
           </div>
         </div>
         <div className={styles.pictures}>
-          <PageTitle title='Скріншоти' />
-          {
-            photos.length > 0
-            &&
+          <PageTitle title="Скріншоти" />
+          {photos.length > 0 && (
             <Carousel
               autoplay
               dots={false}
@@ -99,7 +105,7 @@ const MoviePage = ({ movie }) => {
                 </div>
               ))}
             </Carousel>
-          }
+          )}
         </div>
       </div>
       <div className={styles.player}>

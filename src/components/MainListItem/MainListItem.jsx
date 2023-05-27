@@ -15,17 +15,11 @@ const MainListItem = ({ item, showType = false }) => {
 
   return (
     <li className={styles.item} key={item.id}>
-      <div
-        onClick={navigateToItem}
-        className={styles.item__image}>
+      <div onClick={navigateToItem} className={styles.item__image}>
         <SignedImage url={item.mainPhotoUrl} alt={item.name} />
       </div>
-      <div className={styles.item__name}>
-        {item.name}
-      </div>
-      <div className={styles.item__info}>
-        {itemInfo}
-      </div>
+      <div className={styles.item__name}>{item.name}</div>
+      <div className={styles.item__info}>{itemInfo}</div>
     </li>
   );
 };

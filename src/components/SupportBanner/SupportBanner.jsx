@@ -11,13 +11,16 @@ const SupportBanner = () => {
     <div className={styles.container}>
       <div className={styles.donate}>
         <div className={styles.donate__image}>
-          <img src={donate} alt='Donate' />
+          <img src={donate} alt="Donate" />
         </div>
         <div className={styles.donate__info}>
           <h2>Підтримай нас</h2>
-          <p>Хочеш отримувати більше озвучок в чудовій якості? Зроби свій внесок в розвиток молодої української
-            студії!</p>
-          <Button className={styles.donate__button} onClick={handleButtonClick}>Підтримати</Button>
+          <p>
+            Хочеш отримувати більше озвучок в чудовій якості? Зроби свій внесок в розвиток молодої української студії!
+          </p>
+          <Button className={styles.donate__button} onClick={handleButtonClick}>
+            Підтримати
+          </Button>
         </div>
       </div>
     </div>

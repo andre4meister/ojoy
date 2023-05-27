@@ -26,21 +26,21 @@ const MainPage = ({ newMovies, serials, movies, sliderItems }) => {
         <Slider sliderItems={sliderItems} />
         <MoviesSlider
           showType={true}
-          title='Новинки'
+          title="Новинки"
           moviesGroup={newMovies}
           slidesToShow={countPhotosForSlider()}
           showMoreLink={null}
-          />
+        />
         <MoviesSlider
           showType={false}
-          title='Серіали'
+          title="Серіали"
           moviesGroup={serials}
           slidesToShow={countPhotosForSlider()}
           showMoreLink={'serials'}
         />
         <MoviesSlider
           showType={false}
-          title='Фільми'
+          title="Фільми"
           moviesGroup={movies}
           slidesToShow={countPhotosForSlider()}
           showMoreLink={'movies'}

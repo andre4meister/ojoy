@@ -8,9 +8,19 @@ const MainPageProvider = () => {
   const { getMovies, getNewMovies, getSerials, getSliders } = actions;
 
   const { isLoading: isLoadingMovies, data: movies, error: errorMovies, refetch: refetchMovies } = getMovies;
-  const { isLoading: isLoadingNewMovies, data: newMovies, error: errorNewMovies, refetch: refetchNewMovies } = getNewMovies;
+  const {
+    isLoading: isLoadingNewMovies,
+    data: newMovies,
+    error: errorNewMovies,
+    refetch: refetchNewMovies,
+  } = getNewMovies;
   const { isLoading: isLoadingSerials, data: serials, error: errorSerials, refetch: refetchSerials } = getSerials;
-  const { isLoading: isLoadingSliderItems, data: sliderItems, error: errorSliderItems,  refetch: refetchSliders } = getSliders;
+  const {
+    isLoading: isLoadingSliderItems,
+    data: sliderItems,
+    error: errorSliderItems,
+    refetch: refetchSliders,
+  } = getSliders;
 
   const isLoading = isLoadingMovies || isLoadingNewMovies || isLoadingSerials || isLoadingSliderItems;
   const error = errorMovies || errorNewMovies || errorSerials || errorSliderItems;
@@ -24,7 +34,7 @@ const MainPageProvider = () => {
 
   return (
     <DataResolver data={sliderItems} error={error} loading={isLoading}>
-      <MainPage movies={movies} newMovies={newMovies} serials={serials} sliderItems={sliderItems}/>
+      <MainPage movies={movies} newMovies={newMovies} serials={serials} sliderItems={sliderItems} />
     </DataResolver>
   );
 };
