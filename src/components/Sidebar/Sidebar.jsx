@@ -1,13 +1,15 @@
 import styles from './Sidebar.module.scss';
 import { NavLink } from 'react-router-dom';
 import { Button, Modal } from 'antd';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { CloseOutlined } from '@ant-design/icons';
 import AppContext from '../../context/AppContext';
+import useScreenSize from '../../hooks/useScreenSize';
 
 const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
   const { isAuth, actions } = useContext(AppContext);
 
+  const screenSize = useScreenSize();
   const handleLogout = () => {
     actions.logout();
   };
@@ -20,6 +22,12 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
   const closeSidebar = () => {
     setIsMenuOpen(false);
   };
+
+  useEffect(() => {
+    if (screenSize !== 's' && screenSize !== 'xs') {
+      closeSidebar();
+    }
+  }, [screenSize]);
 
   return (
     <Modal
