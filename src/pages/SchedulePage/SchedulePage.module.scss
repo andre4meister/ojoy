@@ -39,3 +39,9 @@
   gap: 20px;
   padding: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .day__list {
+    flex-wrap: wrap;
+  }
+}

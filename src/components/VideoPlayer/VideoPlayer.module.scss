@@ -1,0 +1,53 @@
+.video {
+  width: 100% !important;
+  height: 460px !important;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+
+  video {
+    object-position: center;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  color: white;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1400px){
+  .video {
+    height: 472px !important;
+  }
+}
+
+@media screen and (max-width: 767.5px){
+  .video {
+    min-width: 440px !important;
+    height: 300px !important;
+  }
+
+  .playButton {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@media screen and (max-width: 479.5px){
+  .video {
+    width: calc(100%);
+    min-width: auto !important;
+    height: auto !important;
+  }
+}

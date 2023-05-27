@@ -26,15 +26,8 @@
   margin: 85px auto 0 auto;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
 }
 
 @media screen and (max-width: 767px) {
-  .header {
-    height: 60px;
-  }
-  .content {
-    min-height: calc(100vh - 200px - 60px);
-    margin: 60px auto 0 auto;
-  }
 }

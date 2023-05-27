@@ -9,7 +9,9 @@
 
 .content {
   width: 100%;
+  padding: 0 20px
 }
+
 .about {
   display: flex;
   justify-content: center;
@@ -48,5 +50,59 @@
     @include regular14;
     color: white;
     margin: 0 0 10px 0;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .about {
+    width: 960px;
+  }
+
+  .about__info {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .about {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 728px;
+    height: 685px;
+  }
+
+  .about__image {
+    width: 728px;
+    height: 420px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .about__info {
+    width: 728px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .about__image {
+    width: 100%;
+    height: fit-content;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .about__info {
+    width: 100%;
   }
 }

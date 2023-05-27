@@ -13,8 +13,10 @@ $color-white: #ffffff;
 $color-black: #000000;
 $color-bg-main: #0F0A11;
 $color-gray: #9D9D9D;
-$color-dark-purple: #1B0A2C;
+$color-dark-purple: #0f0518;
 $color-dark-purple-2: #160B20;
+$color-dark-purple-3: #0B070D;
+$color-dark-purple-4: #0F0A11;
 $color-button-pink: #9D0C49;
 $color-button-pink-hover: #A52359;
 $color-button-pagination: #241A3C;
@@ -82,7 +84,6 @@ $size-sidebarWidth: 260px;
   font-weight: 700;
   font-size: 36px;
   line-height: 49px;
-  color: #000000;
 }
 
 @mixin bold28 {
@@ -90,7 +91,6 @@ $size-sidebarWidth: 260px;
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
-  color: #000000;
 }
 
 @mixin medium28 {
@@ -98,15 +98,13 @@ $size-sidebarWidth: 260px;
   font-weight: 500;
   font-size: 28px;
   line-height: 38px;
-  color: #000000;
 }
 
 @mixin medium20 {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 27px;
-  color: #000000;
+  line-height: 23px;
 }
 
 @mixin medium18 {
@@ -114,7 +112,6 @@ $size-sidebarWidth: 260px;
   font-weight: 500;
   font-size: 18px;
   line-height: 25px;
-  color: #000000;
 }
 
 @mixin semiBold28 {
@@ -130,7 +127,6 @@ $size-sidebarWidth: 260px;
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
-  color: #000000;
 }
 
 @mixin semiBoldButton16 {
@@ -138,7 +134,6 @@ $size-sidebarWidth: 260px;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #000000;
 }
 
 @mixin regular16 {
@@ -146,15 +141,13 @@ $size-sidebarWidth: 260px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #000000;
 }
 
 @mixin regular14 {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 19px;
-  color: #000000;
+  line-height: 16px;
 }
 
 @mixin easyPageContainer {

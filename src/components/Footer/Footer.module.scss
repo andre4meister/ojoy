@@ -21,7 +21,10 @@
 }
 
 .menu_item {
-  @include regular14;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
   display: block;
   color: #ffffff;
 }
@@ -53,7 +56,10 @@
   max-width: 480px;
 
   p {
-    @include regular14;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
     color: $color-gray;
     margin: 0;
   }
@@ -85,7 +91,13 @@
 }
 
 @media screen and (max-width: 1400px) {
-
+  .about {
+    padding: 33px 20px 0 20px;
+  }
+  .about__info {
+    flex-wrap: wrap;
+    gap: 30px 80px;
+  }
 }
 
 @media screen and (max-width: 768px) {

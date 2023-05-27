@@ -10,19 +10,12 @@ import { Button } from 'antd';
 const MyHeader = ({}) => {
   const navigate = useNavigate();
 
-  const { actions, isLoginOpen, isCartOpen, isMenuOpen } = useContext(AppContext);
-  const { setIsLoginOpen, setIsCartOpen, setIsMenuOpen } = actions;
+  const { actions, isLoginOpen, isMenuOpen } = useContext(AppContext);
+  const { setIsLoginOpen, setIsMenuOpen } = actions;
 
   const handleLoginClick = (event) => {
     event.stopPropagation();
     setIsLoginOpen((prev) => !prev);
-    setIsCartOpen(false);
-  };
-
-  const handleCartClick = (event) => {
-    event.stopPropagation();
-    setIsCartOpen((prev) => !prev);
-    setIsLoginOpen(false);
   };
 
   useEffect(() => {
@@ -30,19 +23,18 @@ const MyHeader = ({}) => {
       const cartOrLoginWindow = document.querySelector(`.${styles.cartOrLoginWindow}`);
 
       if (cartOrLoginWindow && !cartOrLoginWindow.contains(event.target)) {
-        setIsCartOpen(false);
         setIsLoginOpen(false);
       }
     };
 
-    if (isLoginOpen || isCartOpen) {
+    if (isLoginOpen) {
       document.addEventListener('click', handleClickOutside);
     }
 
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, [isLoginOpen, isCartOpen, setIsCartOpen, setIsLoginOpen]);
+  }, [isLoginOpen, setIsLoginOpen]);
 
   return (
     <div className={styles.headerContainer}>

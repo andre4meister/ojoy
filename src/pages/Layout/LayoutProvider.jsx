@@ -1,15 +1,19 @@
 import Layout from './Layout';
-import {useMutation, useQuery} from '@tanstack/react-query';
-import {UserAPI} from '../../services/userAPI';
+import { useMutation, useQuery } from '@tanstack/react-query';
+import { UserAPI } from '../../services/userAPI';
 import setUserData from '../../utils/user/setUserData';
 import DataResolver from './DataResolver';
 import AppContext from '../../context/AppContext';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import getUserData from '../../utils/user/getUserData';
 import setToken from '../../utils/user/setToken';
 import checkResponseError from '../../utils/checkRespoonseError';
-import {Alert} from 'antd';
+import { Alert } from 'antd';
 import RegisterModal from '../../components/RegisterModal/RegisterModal';
+import { MoviesApi as MoviesAPI } from '../../services/moviesAPI';
+import { NewMoviesApi } from '../../services/newMovies';
+import { SerialsApi } from '../../services/serialsAPI';
+import { SlidersApi } from '../../services/slidersAPI';
 
 const LayoutProvider = () => {
   let id;
@@ -20,7 +24,6 @@ const LayoutProvider = () => {
 
   const [alert, setAlert] = useState(null);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showRegisterModal, setShowRegisterModal] = useState(false);
 
@@ -90,53 +93,53 @@ const LayoutProvider = () => {
     },
   });
 
-  const addItemToCart = useMutation({
-    mutationKey: ['addItemToCart'],
-    onSuccess: (data) => {
-      setAlert({ type: 'success', message: 'Товар успішно додано до кошика' });
-      // refetch(['user', { id }]);
-    },
+  const getMovies = useQuery({
+    queryKey: ['movies'],
+    enabled: false,
     onError: (error) => {
-      setAlert({ type: 'error', message: error.toString() || 'Помилка при додаванні товару до кошика' });
+      setAlert({ type: 'error', message: error.toString() });
     },
-    mutationFn: async (id) => {
-      if (!id) {
-        setAlert({ type: 'error', message: 'Неправильний id товару' });
-        return;
-      }
-
-      const userData = getUserData();
-      if (userData === null) {
-        throw new Error('Ви повині бути авторизовані для додавання товарів у кошик');
-      }
-
-      const response = await UserAPI.addItemToUserCart({ userId: userData.id, itemId: id });
+    queryFn: async () => {
+      const response = await MoviesAPI.getMovies();
       checkResponseError(response);
       return response.data;
     },
   });
 
-  const removeItemFromCart = useMutation({
-    mutationKey: ['removeItemFromCart'],
-    onSuccess: (data) => {
-      setAlert({ type: 'success', message: 'Товар успішно видалено з кошика' });
-      // refetch(['user', { id }]);
-    },
+  const getNewMovies = useQuery({
+    queryKey: ['newMovies'],
+    enabled: false,
     onError: (error) => {
-      const errorMessage = error.toString();
-      setAlert({ type: 'error', message: errorMessage });
+      setAlert({ type: 'error', message: error.toString() });
     },
-    mutationFn: async (id) => {
-      if (!id) {
-        setAlert({ type: 'error', message: 'Неправильний id товару' });
-        return;
-      }
+    queryFn: async () => {
+      const response = await NewMoviesApi.getNewMovies();
+      checkResponseError(response);
+      return response.data;
+    },
+  });
 
-      const userData = getUserData();
-      if (!userData) {
-        throw new Error('Ви повинні бути авторизовані для видалення товарів з корзини');
-      }
-      const response = await UserAPI.deleteItemFromUserCart({ userId: userData.id, itemId: id });
+  const getSerials = useQuery({
+    queryKey: ['serials'],
+    enabled: false,
+    onError: (error) => {
+      setAlert({ type: 'error', message: error.toString() });
+    },
+    queryFn: async () => {
+      const response = await SerialsApi.getSerials();
+      checkResponseError(response);
+      return response.data;
+    },
+  });
+
+  const getSliders = useQuery({
+    queryKey: ['sliders'],
+    enabled: false,
+    onError: (error) => {
+      setAlert({ type: 'error', message: error.toString() });
+    },
+    queryFn: async () => {
+      const response = await SlidersApi.getSliders();
       checkResponseError(response);
       return response.data;
     },
@@ -149,14 +152,14 @@ const LayoutProvider = () => {
     isAuth: JSON.parse(localStorage.getItem('isAuth')),
     token: localStorage.getItem('token'),
     isLoginOpen,
-    isCartOpen,
     isMenuOpen,
     showRegisterModal,
     actions: {
-      addItemToCart,
-      removeItemFromCart,
       setAlert,
-      setIsCartOpen,
+      getMovies,
+      getNewMovies,
+      getSerials,
+      getSliders,
       setIsLoginOpen,
       setIsMenuOpen,
       setShowRegisterModal,

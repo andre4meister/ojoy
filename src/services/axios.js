@@ -2,7 +2,7 @@ import axios from 'axios';
 import getToken from '../utils/user/getToken';
 
 const backendUrl =
-  process.env.NODE_ENV === 'development' ? 'http://localhost:5300/' : 'https://online-store-postgresql.onrender.com/';
+  process.env.NODE_ENV === 'development' ? 'http://localhost:5000/' : 'https://online-store-postgresql.onrender.com/';
 const axiosInstance = axios.create({
   baseURL: backendUrl,
   withCredentials: false,
@@ -29,7 +29,7 @@ axiosInstance.interceptors.request.use(
 axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response?.status === 401 || error.response?.status === 403) {
+    if (error.response.status === 401 || error.response.status === 403) {
       //Todo: dispatch logout
       // dispatchLoginFailure(error.response?.data.message);
     }

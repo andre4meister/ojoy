@@ -1,11 +1,17 @@
 @import '../../styles/variables.module.scss';
 
-.donate {
+.container {
   margin-top: 40px;
   height: 364px;
   width: 100vw;
   padding: 40px 130px;
   background-color: $color-dark-purple-2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.donate {
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -13,8 +19,8 @@
 }
 
 .donate__image {
-  width: 479px;
-  height: 284px;
+  min-width: 480px;
+  min-height: 284px;
   border-radius: 5px;
   display: flex;
 
@@ -50,5 +56,60 @@
     padding: 15px 45px;
     width: 168px;
     height: 46px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    padding: 40px 20px;
+  }
+
+  .donate {
+    max-width: 960px;
+  }
+
+  .donate__info {
+    width: 460px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .donate {
+    max-width: 728px;
+  }
+
+  .donate__image {
+    min-width: 344px;
+    min-height: 284px;
+  }
+
+  .donate__info {
+    width: 364px;
+  }
+}
+
+@media screen and (max-width: 767.5px) {
+  .container {
+    height: fit-content;
+  }
+  .donate {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .donate__image {
+    min-width: 100%;
+    min-height: auto;
+
+    img {
+      min-width: 100%;
+    }
+  }
+
+  .donate__info {
+    width: 100%;
+    max-width: 440px;
   }
 }

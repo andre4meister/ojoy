@@ -6,7 +6,7 @@
   width: fit-content !important;
   height: fit-content !important;
   position: fixed;
-  top: 60px;
+  top: 85px;
   left: 0;
 
   & > div {
@@ -32,7 +32,7 @@
 .sidebar {
   width: 184px;
   height: calc(100vh - 60px);
-  background-color: black;
+  background-color: #0F0518FF;
   padding: 30px 24px;
   display: flex;
   flex-direction: column;
@@ -50,14 +50,15 @@
     margin: 0;
 
     &:hover {
-      color: $color-lime;
+      color: $color-button-pink;
     }
   }
 }
 
 .sidebar__button {
-  @include limeButton;
+  @include pinkButton;
   @include semiBoldButton16;
+  color: white;
   width: 100%;
   margin-top: 30px;
 }

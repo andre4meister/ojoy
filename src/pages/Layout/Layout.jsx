@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import Loader from '../../components/Loader/Loader';
 import styles from './Layout.module.scss';
@@ -15,8 +15,6 @@ const MainLayout = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // const error = false
-  // const isLoading = false
   const userData = useContext(AppContext);
   const { user, error, isLoading } = userData;
   const isAuth = true;
@@ -30,7 +28,7 @@ const MainLayout = () => {
         navigate('/login', { replace: true });
       }
     }
-  }, [errorMessage, location.pathname]);
+  }, [errorMessage, location.pathname, navigate]);
 
   if (isLoading) {
     return <Loader />;

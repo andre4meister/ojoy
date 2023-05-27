@@ -12,6 +12,10 @@
 
 .moviesBlock {
   margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
 .moviesList {
@@ -32,4 +36,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+@media screen and (max-width: 1439.5px) {
+  .container {
+    padding: 0 20px;
+  }
 }

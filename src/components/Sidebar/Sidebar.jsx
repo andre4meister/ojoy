@@ -33,18 +33,23 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen }) => {
     >
       <div className={styles.sidebar}>
         <div className={styles.navItem}>
+          <NavLink to="movies" onClick={closeSidebar}>
+            Фільми
+          </NavLink>
+        </div>
+        <div className={styles.navItem}>
+          <NavLink to="serials" onClick={closeSidebar}>
+            Серіали
+          </NavLink>
+        </div>
+        <div className={styles.navItem}>
+          <NavLink to="schedule" onClick={closeSidebar}>
+            Розклад
+          </NavLink>
+        </div>
+        <div className={styles.navItem}>
           <NavLink to="about" onClick={closeSidebar}>
             Про нас
-          </NavLink>
-        </div>
-        <div className={styles.navItem}>
-          <NavLink to="collaboration" onClick={closeSidebar}>
-            Співпраця
-          </NavLink>
-        </div>
-        <div className={styles.navItem}>
-          <NavLink to="delivery" onClick={closeSidebar}>
-            Оплата і доставка
           </NavLink>
         </div>
         <div className={styles.navItem}>

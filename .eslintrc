@@ -33,7 +33,10 @@
         "react-hooks/exhaustive-deps": "warn",
         "jsx-a11y/anchor-is-valid": "off",
         "no-unused-vars": "warn",
+        "no-undef": "off",
         "import/no-unresolved": "warn",
+        "import/named": "off",
+        "import/namespace": "off",
         "import/no-extraneous-dependencies": "warn",
         "import/extensions": [
             "off",
